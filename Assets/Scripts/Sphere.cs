@@ -6,7 +6,7 @@ public class Sphere : MonoBehaviour
 {
     private void OnTriggerEnter(Collider sphereIn)
     {
-        sphereIn.GetComponent<Rigidbody>().useGravity = false;        
+        sphereIn.GetComponent<Rigidbody>().useGravity = false;
     }
 
     private void OnTriggerExit(Collider sphereOut)

@@ -12,7 +12,6 @@ public class BoomController : MonoBehaviour
        void Update()
     {
         TimeToExplosion -= Time.deltaTime;
-
         if(TimeToExplosion <= 0 )
         {
             Boom();
@@ -30,7 +29,6 @@ public class BoomController : MonoBehaviour
                 Vector3 direction = B.transform.position - transform.position;
                 B.AddForce((Radius - dis) * Power * direction.normalized, ForceMode.Impulse);
             }
-
         }
         TimeToExplosion = 3;
     }

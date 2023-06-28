@@ -4,8 +4,7 @@ using UnityEngine.UI;
 
 public class Moving : MonoBehaviour
 {
-    public Transform Target;
-    
+    public Transform Target;    
     public float Speed;
             
        void Update()

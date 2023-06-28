@@ -5,12 +5,12 @@ using UnityEngine;
 public class Superman : MonoBehaviour
 {    
     public AudioSource Kick;
-    public Transform Trash;    
+    public Transform Trash;
     public float Power;
 
     private void OnTriggerEnter(Collider box)
     {
-        if (box.gameObject.name == "Trig")
+        if (box.gameObject.CompareTag("Finish"))
         {
             GetComponent<Rigidbody>().isKinematic = true;
         }
@@ -20,7 +20,6 @@ public class Superman : MonoBehaviour
     {       
         Vector3 direction = Trash.position - transform.position;
         badguy.rigidbody.AddForce(direction * Power, ForceMode.Impulse);
-        Kick.Play();     
+        Kick.Play();
     }
-
 }
